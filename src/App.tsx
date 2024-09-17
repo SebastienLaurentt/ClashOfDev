@@ -1,10 +1,14 @@
-import artisteImg from "./assets/artisteImg.svg";
-import batisseurImg from "./assets/batisseurImg.svg";
-import bossImg from "./assets/bossImg.svg";
-import chercheurImg from "./assets/chercheurImg.svg";
-import maitreImg from "./assets/maitreImg.svg";
-import secretImg from "./assets/secretImg.svg";
-import switchLogo from "./assets/switchLogo.svg";
+import ArtisteImg from "./assets/artisteImg.svg";
+import BatisseurImg from "./assets/batisseurImg.svg";
+import BlueLogo from "./assets/blueLogo.svg";
+import BossImg from "./assets/bossImg.svg";
+import ChercheurImg from "./assets/chercheurImg.svg";
+import GreenLogo from "./assets/greenLogo.svg";
+import MaitreImg from "./assets/maitreImg.svg";
+import PinkLogo from "./assets/pinkLogo.svg";
+import SecretImg from "./assets/secretImg.svg";
+import SwitchLogo from "./assets/switchLogo.svg";
+import WhiteLogo from "./assets/whiteLogo.svg";
 import PiscineLogo from "./components/PiscineLogo";
 import Section from "./components/Section";
 
@@ -14,7 +18,7 @@ function App() {
       <header className="min-h-[40px] mx-auto px-3 2xl:px-0 max-w-[1440px] w-full flex flex-row justify-between items-center mb-[114px] 2xl:mb-[141px]">
         <PiscineLogo />
         <span className="font-bold">0%</span>
-        <img src={switchLogo} alt="" />
+        <img src={SwitchLogo} alt="" />
       </header>
       <section className="2xl:mb-[100px] mb-[101px]">
         <div className="flex flex-col px-3 2xl:px-0 max-w-[1440px] mx-auto 2xl:flex-row mb-[100px] 2xl:mb-40">
@@ -29,7 +33,7 @@ function App() {
           category="DESIGN"
           pointsNumber="/6 pts"
           name="L’ARTISTE DE RENOM"
-          imgSrc={artisteImg}
+          imgSrc={ArtisteImg}
           paragraphe1=<>
             <span className="font-bold">Le design</span>, c’est son terrain de
             jeu. Il maîtrise et retranscrit correctement chaque pixel de la
@@ -48,7 +52,7 @@ function App() {
           category="CODE"
           pointsNumber="/6 pts"
           name="LE BÂTISSEUR DE CODE"
-          imgSrc={batisseurImg}
+          imgSrc={BatisseurImg}
           paragraphe1=<>
             Ses lignes de code sont des fondations solides. C’est{" "}
             <span className="font-bold">un maître du front</span>, capable de
@@ -65,7 +69,7 @@ function App() {
           category="MOTION"
           pointsNumber="/3 pts"
           name="LE MAITRE DE LA FLUIDITÉ"
-          imgSrc={maitreImg}
+          imgSrc={MaitreImg}
           paragraphe1=<>
             Aucun composant ne s’affiche sans une{" "}
             <span className="font-bold">animation soignée</span>. Ses
@@ -83,7 +87,7 @@ function App() {
           category="RESPONSIVE"
           pointsNumber="/2 pts"
           name="LE CHERCHEUR DE BREAKPOINT"
-          imgSrc={chercheurImg}
+          imgSrc={ChercheurImg}
           paragraphe1=<>
             Quelle que soit la taille de l’écran, il garantit une expérience
             utilisateur sans faille. Chaque site{" "}
@@ -101,7 +105,7 @@ function App() {
           category="EASTER EGG"
           pointsNumber="/3 pts"
           name="LE MAITRE DES SECRETS"
-          imgSrc={secretImg}
+          imgSrc={SecretImg}
           paragraphe1=<>
             Derrière une ligne de code bien choisie se cache un s
             <span className="font-bold">ecret bien gardé. </span>
@@ -118,7 +122,7 @@ function App() {
           category="BIG BOSS"
           pointsNumber="/ Infinite pts"
           name="LE SUR-BOOSTED"
-          imgSrc={bossImg}
+          imgSrc={BossImg}
           paragraphe1=<>
             Il excelle dans tous les domaines, alliant design, propreté de code,
             réactivité, animations fluides et créativité cachée.{" "}
@@ -130,6 +134,36 @@ function App() {
             standing ovation du jury.{" "}
           </>
         />
+        <section className="bg-[#262625] rounded-[60px] h-[600px] 2xl:h-[900px] relative">
+          <div className="ml-[46px] 2xl:ml-[87px] pt-10 2xl:pt-[220px]">
+            <span className="ml-0.5  2xl:ml-0 text-[#FEFEFE]">/ FINALE02</span>
+            <p className="mt-[130px] text-justify 2xl:mt-0 font-semibold flex 2xl:h-[372px] flex-col justify-center text-[40px] leading-[48px] 2xl:text-[115px] 2xl:leading-[123px] text-[#F3F3F1] w-[272px] 2xl:w-[1172px]">
+              Click Me ? Might enter the finals{" "}
+            </p>
+          </div>
+          <img
+            src={WhiteLogo}
+            alt=""
+            className="absolute top-[90.28px] left-[241px] 2xl:top-[516.14px] 2xl:left-[1061.97px] w-[53.55px] h-[49.56px]"
+          />
+
+          <div className="2xl:mt-[132px] mt-[125px] relative flex justify-center items-center mx-auto 2xl:w-[219px] h-[91px] ">
+            <button className="z-20 bg-[#F3F3F1] text-[#262625] text-[13.67px] font-semibold   rounded-[60px] w-[178px] h-[58px] 2xl:w-[212px]   ">
+              Enter Next Level
+            </button>
+            <img
+              src={BlueLogo}
+              alt=""
+              className="absolute size-[38px] z-30 top-[53.38px] left-[168.38px]"
+            />
+            <img
+              src={PinkLogo}
+              alt=""
+              className="z-10 absolute size-16   top-[-38px] left-[199.97px]"
+            />
+            <img src={GreenLogo} alt="" className="absolute size-[30px] z-40" />
+          </div>
+        </section>
       </section>
       <footer className="min-h-[40px] flex flex-row justify-between mx-auto max-w-[1440px] items-center px-3 2xl:px-0">
         <PiscineLogo />
