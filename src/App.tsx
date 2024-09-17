@@ -3,6 +3,7 @@ import BatisseurImg from "./assets/batisseurImg.svg";
 import BlueLogo from "./assets/blueLogo.svg";
 import BossImg from "./assets/bossImg.svg";
 import ChercheurImg from "./assets/chercheurImg.svg";
+import ClashVector from "./assets/clashVector.svg";
 import GreenLogo from "./assets/greenLogo.svg";
 import MaitreImg from "./assets/maitreImg.svg";
 import PinkLogo from "./assets/pinkLogo.svg";
@@ -25,7 +26,14 @@ function App() {
           <div></div>
           <img src="" alt="" />
         </div>
-        <div className="h-[174px] bg-red-50"></div>
+
+        <div className="relative overflow-hidden h-[174px] w-screen -ml-[50vw] left-1/2">
+          <img
+            src={ClashVector}
+            alt=""
+            className="h-full w-auto min-w-full object-cover object-left"
+          />
+        </div>
       </section>
       <section className="max-w-[1440px] mx-auto px-3 2xl:px-0 2xl:mb-10 mb-[59px]">
         <Section
