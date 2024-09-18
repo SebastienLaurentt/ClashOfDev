@@ -7,6 +7,9 @@ import GreenLogo from "@/assets/greenLogo.svg";
 import PurpleLogo from "@/assets/purpleLogo.svg";
 import MaitreImg from "@/assets/maitreImg.svg";
 import PinkLogo from "@/assets/pinkLogo.svg";
+import PinkLogoBig from "@/assets/pinkLogoBig.svg";
+import GreenLogoBig from "@/assets/greenLogoBig.svg";
+import BlueLogoBig from "@/assets/blueLogoBig.svg";
 import RedLogo from "@/assets/redLogo.svg";
 import YellowLogo from "@/assets/yellowLogo.svg";
 import SecretImg from "@/assets/secretImg.svg";
@@ -60,7 +63,7 @@ const CardsSection = () => {
           fini le challenge en s’assurant d’avoir le code le plus clair et le
           plus propre des 36 participants.
         </>
-        logoSrc={PinkLogo}
+        logoSrc={PinkLogoBig}
         cursors={[
           {
             name: "Lina",
@@ -92,7 +95,7 @@ const CardsSection = () => {
           Ce dev a l’oeil et maitrise{" "}
           <span className="font-bold">le motion</span> mieux que n’importe qui.{" "}
         </>
-        logoSrc={GreenLogo}
+        logoSrc={GreenLogoBig}
                 cursors={[
           {
             name: "Lina",
@@ -126,7 +129,7 @@ const CardsSection = () => {
           <span className="font-bold">chaque breakpoint</span> attentivement, on
           ne pourra pas le reprendre à l’inspection!
         </>
-        logoSrc={BlueLogo}
+        logoSrc={BlueLogoBig}
         cursors={[
           {
             name: "Lina",
@@ -223,7 +226,7 @@ const CardsSection = () => {
         />
 
         <div className="2xl:mt-[132px] mt-[125px] relative flex justify-center items-center mx-auto w-[185px] 2xl:w-[219px] h-[91px] ">
-          <button className="z-20 bg-[#F3F3F1] text-[#262625] text-[13.67px] font-semibold  rounded-[60px] w-[178px] h-[58px] 2xl:w-[212px]   ">
+          <button className="z-20 bg-[#F3F3F1]  text-[13.67px] font-semibold  rounded-[60px] w-[178px] h-[58px] 2xl:w-[212px]   ">
             Enter Next Level
           </button>
           <img

@@ -38,7 +38,8 @@ const CategoryCard = ({
       <div className="my-10 2xl:ml-[89px] ml-[47px] 2xl:mr-[61px] h-[44px] flex flex-row justify-between items-center">
         <div className="flex flex-row">
           <div className="flex flex-col items-start gap-y-1 w-[85px] 2xl:w-[155px] mr-2 2xl:mr-5">
-            <span>{category}</span>
+            <span className="hidden 2xl:block">{category}</span>
+            <span className="2xl:hidden">NOS HÉROS</span>
             <span>{pointsNumber}</span>
           </div>
           <span className="font-bold">{name}</span>
@@ -54,7 +55,7 @@ const CategoryCard = ({
         <div className="2xl:w-[987px] w-full 2xl:h-[696px] mr-5 rounded-[40px]">
           <img src={imgSrc} alt="aa" />
         </div>
-        <div className="mt-[26px] w-[241px] text-left flex flex-col gap-y-8">
+        <div className="mt-[26px] w-full 2xl:w-[241px] text-left flex flex-col gap-y-8">
           <p>{paragraphe1}</p>
           <p>{paragraphe2}</p>
         </div>
@@ -63,7 +64,8 @@ const CategoryCard = ({
       <img
         src={logoSrc}
         alt=""
-        className="absolute 2xl:size-[310px] size-[135.44px] bottom-[-10px] 2xl:bottom-[-50px] right-0 2xl:right-[-20px]"
+        className="absolute 2xl:size-[412px] size-[180px] bottom-[-25px] 2xl:bottom-[-30px] right-0 2xl:right-[-12px]"
+        style={{ transform: "rotate(0deg)" }}
       />
     </div>
   );
