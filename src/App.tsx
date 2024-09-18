@@ -2,12 +2,14 @@ import ArtisteImg from "./assets/artisteImg.svg";
 import BatisseurImg from "./assets/batisseurImg.svg";
 import BlueLogo from "./assets/blueLogo.svg";
 import BossImg from "./assets/bossImg.svg";
+import CardHero from "./assets/cardHero.svg";
 import ChercheurImg from "./assets/chercheurImg.svg";
 import ClashVector from "./assets/clashVector.svg";
 import GreenLogo from "./assets/greenLogo.svg";
 import MaitreImg from "./assets/maitreImg.svg";
 import PinkLogo from "./assets/pinkLogo.svg";
 import SecretImg from "./assets/secretImg.svg";
+import StrongerVector from "./assets/strongerVector.svg";
 import SwitchLogo from "./assets/switchLogo.svg";
 import WhiteLogo from "./assets/whiteLogo.svg";
 import PiscineLogo from "./components/PiscineLogo";
@@ -15,19 +17,41 @@ import Section from "./components/Section";
 
 function App() {
   return (
-    <main className=" py-10 2xl:py-8 2xl:px-0">
+    <main className=" py-10 2xl:py-8 2xl:px-0 bg-[#F3F3F1] overflow-x-hidden">
       <header className="min-h-[40px] mx-auto px-3 2xl:px-0 max-w-[1440px] w-full flex flex-row justify-between items-center mb-[114px] 2xl:mb-[141px]">
         <PiscineLogo />
         <span className="font-bold">0%</span>
         <img src={SwitchLogo} alt="" />
       </header>
       <section className="2xl:mb-[100px] mb-[101px]">
-        <div className="flex flex-col px-3 2xl:px-0 max-w-[1440px] mx-auto 2xl:flex-row mb-[100px] 2xl:mb-40">
-          <div></div>
-          <img src="" alt="" />
+        <div className="flex flex-col px-3 2xl:px-0 max-w-[1440px] mx-auto 2xl:flex-row 2xl:justify-between 2xl:items-center mb-[100px] 2xl:mb-40">
+          <div className="flex flex-col mb-10 2xl:mb-0 text-[74px] leading-[82px] 2xl:text-[115px] 2xl:leading-[123px] font-semibold text-[#262625]">
+            <span className="2xl:hidden">
+              <span className="flex flex-row items-center justify-between">
+                Que le
+                <img
+                  src={StrongerVector}
+                  alt=""
+                  className="2xl:hidden h-[80px] mr-3 ml-0 w-[103px] inline-block"
+                  style={{ transform: "rotate(21.39deg)" }}
+                />
+              </span>
+              plus fort,
+            </span>
+            <span className="hidden 2xl:block">Que le plus fort,</span>
+            <div className="flex flex-row items-center">
+              <img
+                src={StrongerVector}
+                alt=""
+                className="2xl:ml-[28px] hidden 2xl:block 2xl:mr-[45px] h-[80px] w-[103px]"
+              />{" "}
+              <span className="italic">l’emporte!</span>
+            </div>
+          </div>
+          <img src={CardHero} alt="" className="2xl:h-[356px] 2xl:w-[368px]" />
         </div>
 
-        <div className="relative overflow-hidden h-[174px] w-screen -ml-[50vw] left-1/2">
+        <div className="relative overflowhidden h-[174px] w-screen -ml-[50vw] left-1/2">
           <img
             src={ClashVector}
             alt=""
