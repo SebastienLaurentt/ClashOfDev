@@ -1,4 +1,4 @@
-import CardHero from "../../assets/cardHero.svg";
+import CardHero from "../../assets/CardHero.svg";
 import ClashVector from "../../assets/clashVector.svg";
 import StrongerVector from "../../assets/strongerVector.svg";
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
         <img src={CardHero} alt="" className="2xl:h-[356px] 2xl:w-[368px]" />
       </div>
 
-      <div className="relative  h-[174px] w-screen -ml-[50vw] left-1/2">
+      <div className="relative h-[174px] w-screen -ml-[50vw] left-1/2">
         <img
           src={ClashVector}
           alt=""
