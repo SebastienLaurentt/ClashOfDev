@@ -18,7 +18,7 @@ import CategoryCard from "../CategoryCard";
 
 const CardsSection = () => {
   return (
-    <section className="2xl:max-w-[1440px] max-w-[366px] mx-auto 2xl:px-8 2xl:mb-10 mb-[59px]">
+    <>
       <CategoryCard
         bgColor="bg-[#EBEDFF]"
         category="DESIGN"
@@ -211,7 +211,7 @@ const CardsSection = () => {
           },
         ]}
       />
-      <section className="bg-[#262625] rounded-[60px] h-[600px] 2xl:h-[900px] relative">
+      <div className="bg-[#262625] rounded-[60px] h-[600px] 2xl:h-[900px] relative">
         <div className="ml-[46px] 2xl:ml-[87px] pt-10 2xl:pt-[220px]">
           <span className="ml-0.5  2xl:ml-0 text-[#FEFEFE]">/ FINALE02</span>
           <p className="mt-[130px] text-justify 2xl:mt-0 font-semibold flex 2xl:h-[372px] flex-col justify-center text-[40px] leading-[48px] 2xl:text-[115px] 2xl:leading-[123px] text-[#F3F3F1] w-[272px] 2xl:w-[1172px]">
@@ -244,8 +244,8 @@ const CardsSection = () => {
             className="z-10 absolute size-[64px] 2xl:top-[-25px] top-[-20px] left-[140px] 2xl:left-[170px]"
           />
         </div>
-      </section>
-    </section>
+      </div>
+    </>
   );
 };
 
