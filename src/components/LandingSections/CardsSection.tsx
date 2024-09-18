@@ -18,7 +18,7 @@ import CategoryCard from "../CategoryCard";
 
 const CardsSection = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-3 2xl:px-8 2xl:mb-10 mb-[59px]">
+    <section className="2xl:max-w-[1440px] max-w-[366px] mx-auto 2xl:px-8 2xl:mb-10 mb-[59px]">
       <CategoryCard
         bgColor="bg-[#EBEDFF]"
         category="DESIGN"
@@ -70,12 +70,6 @@ const CardsSection = () => {
         </>
         logoSrc={PinkLogoBig}
         cursors={[
-          {
-            name: "Lina",
-            bgColor: "#F588B9",
-            borderColor: "#D6699A",
-            fontColor: "text-[#FEFEFE]",
-          },
           {
             name: "Chris",
             bgColor: "#F588B9",

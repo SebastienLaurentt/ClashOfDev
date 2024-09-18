@@ -33,7 +33,7 @@ const CategoryCard = ({
 }: CategoryCardProps) => {
   return (
     <div
-      className={`w-full relative h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px] overflow-hidden`}
+      className={`relative h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px] overflow-hidden`}
     >
       <div className="my-10 2xl:ml-[89px] ml-[47px] 2xl:mr-[61px] h-[44px] flex flex-row justify-between items-center">
         <div className="flex flex-row">
@@ -44,16 +44,15 @@ const CategoryCard = ({
           </div>
           <span className="font-bold">{name}</span>
         </div>
-        <div className="absolute 2xl:static left-[262px] top-[112px] flex 2xl:flex-row flex-col-reverse gap-y-[65px] 2xl:gap-y-0 2xl:gap-x-5">
-
+        <div className="absolute 2xl:static left-[275px] top-[112px] flex 2xl:flex-row flex-col-reverse gap-y-[35px] 2xl:gap-y-0 2xl:gap-x-5">
           {cursors.map((cursorProps, index) => (
             <Cursor key={index} {...cursorProps} />
           ))}
         </div>
       </div>
       <div className="2xl:ml-10 2xl:mb-10 mx-[47px] flex flex-col 2xl:flex-row">
-        <div className="2xl:w-[987px] w-full 2xl:h-[696px] mr-5 rounded-[40px]">
-          <img src={imgSrc} alt="aa" />
+        <div className="2xl:w-[987px] w-full 2xl:h-[696px]  mr-5 rounded-[40px]">
+          <img src={imgSrc} alt="aa"  />
         </div>
         <div className="mt-[20px] 2xl:w-[241px] text-left flex flex-col gap-y-8 text-[#262625]/60">
           <p>{paragraphe1}</p>
