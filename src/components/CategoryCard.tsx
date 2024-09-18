@@ -28,10 +28,10 @@ const CategoryCard = ({
   paragraphe1,
   paragraphe2,
   logoSrc,
-  cursors, 
+  cursors,
 }: CategoryCardProps) => {
   return (
-    <section
+    <div
       className={`w-full relative h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px] overflow-hidden`}
     >
       <div className="my-10 2xl:ml-[89px] ml-[47px] 2xl:mr-[61px] h-[44px] flex flex-row justify-between items-center">
@@ -42,7 +42,7 @@ const CategoryCard = ({
           </div>
           <span className="font-bold">{name}</span>
         </div>
-        <div className="hidden 2xl:flex flex-row gap-x-5">
+        <div className="absolute 2xl:static left-[262px] top-[112px] flex 2xl:flex-row flex-col-reverse gap-y-[65px] 2xl:gap-y-0 2xl:gap-x-5">
           {/* Map through cursors and pass the props to Cursor */}
           {cursors.map((cursorProps, index) => (
             <Cursor key={index} {...cursorProps} />
@@ -64,7 +64,7 @@ const CategoryCard = ({
         alt=""
         className="absolute 2xl:size-[310px] size-[135.44px] bottom-[-10px] 2xl:bottom-[-50px] right-0 2xl:right-[-20px]"
       />
-    </section>
+    </div>
   );
 };
 
