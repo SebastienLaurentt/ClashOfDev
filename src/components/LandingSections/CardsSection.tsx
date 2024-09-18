@@ -4,8 +4,11 @@ import BlueLogo from "@/assets/blueLogo.svg";
 import BossImg from "@/assets/bossImg.svg";
 import ChercheurImg from "@/assets/chercheurImg.svg";
 import GreenLogo from "@/assets/greenLogo.svg";
+import PurpleLogo from "@/assets/purpleLogo.svg";
 import MaitreImg from "@/assets/maitreImg.svg";
 import PinkLogo from "@/assets/pinkLogo.svg";
+import RedLogo from "@/assets/redLogo.svg";
+import YellowLogo from "@/assets/yellowLogo.svg";
 import SecretImg from "@/assets/secretImg.svg";
 import WhiteLogo from "@/assets/whiteLogo.svg";
 import CategoryCard from "../CategoryCard";
@@ -31,6 +34,7 @@ const CardsSection = () => {
             Figma n’a aucun secret pour ce Dev de talent.
           </span>
         </>
+        logoSrc={PurpleLogo}
       />
       <CategoryCard
         bgColor="bg-[#FFEDF5]"
@@ -48,6 +52,7 @@ const CardsSection = () => {
           fini le challenge en s’assurant d’avoir le code le plus clair et le
           plus propre des 36 participants.
         </>
+        logoSrc={PinkLogo}
       />
       <CategoryCard
         bgColor="bg-[#ECFFCE]"
@@ -65,6 +70,7 @@ const CardsSection = () => {
           Ce dev a l’oeil et maitrise{" "}
           <span className="font-bold">le motion</span> mieux que n’importe qui.{" "}
         </>
+        logoSrc={GreenLogo}
       />
       <CategoryCard
         bgColor="bg-[#BADAFF]"
@@ -83,6 +89,7 @@ const CardsSection = () => {
           <span className="font-bold">chaque breakpoint</span> attentivement, on
           ne pourra pas le reprendre à l’inspection!
         </>
+        logoSrc={BlueLogo}
       />
       <CategoryCard
         bgColor="bg-[#FFFAC2]"
@@ -100,6 +107,7 @@ const CardsSection = () => {
           Dev attentif aux comportements utilisateurs il saura cacher{" "}
           <span className="font-bold">l’Easter Egg</span> au meilleur endroit.
         </>
+        logoSrc={YellowLogo}
       />
       <CategoryCard
         bgColor="bg-[#FFBCAB]"
@@ -117,6 +125,7 @@ const CardsSection = () => {
           Ce dev aux <span className="font-bold">multitalents</span> a reçu la
           standing ovation du jury.{" "}
         </>
+        logoSrc={RedLogo}
       />
       <section className="bg-[#262625] rounded-[60px] h-[600px] 2xl:h-[900px] relative">
         <div className="ml-[46px] 2xl:ml-[87px] pt-10 2xl:pt-[220px]">

@@ -6,6 +6,7 @@ interface CategoryCardProps {
   imgSrc: string;
   paragraphe1: JSX.Element;
   paragraphe2: JSX.Element;
+  logoSrc: string;
 }
 
 const CategoryCard = ({
@@ -16,10 +17,11 @@ const CategoryCard = ({
   imgSrc,
   paragraphe1,
   paragraphe2,
+  logoSrc,
 }: CategoryCardProps) => {
   return (
     <section
-      className={`w-full h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px]`}
+      className={`w-full relative h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px] overflow-hidden`}
     >
       <div className="my-10 2xl:ml-[89px] ml-[47px] h-[44px] flex flex-row">
         <div className="flex flex-col items-start gap-y-1 w-[85px] 2xl:w-[155px] mr-2 2xl:mr-5">
@@ -37,6 +39,7 @@ const CategoryCard = ({
           <p>{paragraphe2}</p>
         </div>
       </div>
+      <img src={logoSrc} alt="" className="absolute 2xl:size-[310px] size-[135.44px] bottom-[-10px] 2xl:bottom-[-50px] right-0 2xl:right-[-20px] " />
     </section>
   );
 };
