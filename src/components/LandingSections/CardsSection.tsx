@@ -242,12 +242,12 @@ const CardsSection = () => {
           <img
             src={BlueLogo}
             alt=""
-            className="absolute size-[38px] z-30 top-[53.38px] left-[168.38px]"
+            className="absolute size-[38px] z-30 top-[53.38px] left-[135px] 2xl:left-[168.38px]"
           />
           <img
             src={PinkLogo}
             alt=""
-            className="z-10 absolute size-[64px] top-[-25px] left-[170px]"
+            className="z-10 absolute size-[64px] 2xl:top-[-25px] top-[-20px] left-[140px] 2xl:left-[170px]"
           />
         </div>
       </section>
