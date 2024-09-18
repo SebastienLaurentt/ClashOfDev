@@ -179,21 +179,26 @@ function App() {
             className="absolute top-[90.28px] left-[241px] 2xl:top-[516.14px] 2xl:left-[1061.97px] w-[53.55px] h-[49.56px]"
           />
 
-          <div className="2xl:mt-[132px] mt-[125px] relative flex justify-center items-center mx-auto 2xl:w-[219px] h-[91px] ">
-            <button className="z-20 bg-[#F3F3F1] text-[#262625] text-[13.67px] font-semibold   rounded-[60px] w-[178px] h-[58px] 2xl:w-[212px]   ">
+          <div className="2xl:mt-[132px] mt-[125px] relative flex justify-center items-center mx-auto w-[185px] 2xl:w-[219px] h-[91px] ">
+            <button className="z-20 bg-[#F3F3F1] text-[#262625] text-[13.67px] font-semibold  rounded-[60px] w-[178px] h-[58px] 2xl:w-[212px]   ">
               Enter Next Level
             </button>
             <img
-              src={BlueLogo}
-              alt=""
-              className="absolute size-[38px] z-30 top-[53.38px] left-[168.38px]"
-            />
-            <img
-              src={PinkLogo}
-              alt=""
-              className="z-10 absolute size-16   top-[-38px] left-[199.97px]"
-            />
-            <img src={GreenLogo} alt="" className="absolute size-[30px] z-40" />
+                src={GreenLogo}
+                alt=""
+                className="absolute size-[30px] left-0 top-0 z-40"
+              />
+              <img
+                src={BlueLogo}
+                alt=""
+                className="absolute size-[38px] z-30 top-[53.38px] left-[168.38px]"
+              />
+              <img
+                src={PinkLogo}
+                alt=""
+                className="z-10 absolute size-[64px] top-[-25px] left-[170px]"
+          
+              />
           </div>
         </section>
       </section>
