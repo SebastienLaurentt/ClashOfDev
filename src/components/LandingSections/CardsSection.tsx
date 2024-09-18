@@ -99,6 +99,7 @@ const CardsSection = () => {
             bgColor: "#A2B87E",
             borderColor: "#95AE6D",
             fontColor: "text-[#FEFEFE]",
+            classname: "ml-1.5 2xl:ml-0",
           },
           {
             name: "Chris",
@@ -132,6 +133,7 @@ const CardsSection = () => {
             bgColor: "#6B93C0",
             borderColor: "#6B93C0",
             fontColor: "text-[#BADAFF]",
+            classname: "ml-1.5 2xl:ml-0",
           },
           {
             name: "Chris",
@@ -164,6 +166,7 @@ const CardsSection = () => {
             bgColor: "#CAC48E",
             borderColor: "#C2BB82",
             fontColor: "text-[#FFFAC2]",
+            classname: "ml-1.5 2xl:ml-0",
           },
           {
             name: "Chris",
@@ -196,6 +199,7 @@ const CardsSection = () => {
             bgColor: "#F28164",
             borderColor: "#D46F55",
             fontColor: "text-[#FEFEFE]",
+            classname: "ml-1.5 2xl:ml-0",
           },
           {
             name: "Chris",

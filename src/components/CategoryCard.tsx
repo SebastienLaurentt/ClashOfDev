@@ -5,6 +5,7 @@ interface CursorProps {
   bgColor: string;
   borderColor: string;
   fontColor: string;
+  classname?: string;
 }
 
 interface CategoryCardProps {
@@ -16,7 +17,7 @@ interface CategoryCardProps {
   paragraphe1: JSX.Element;
   paragraphe2: JSX.Element;
   logoSrc: string;
-  cursors: CursorProps[]; // Add an array of CursorProps for multiple cursors
+  cursors: CursorProps[]; 
 }
 
 const CategoryCard = ({
@@ -43,7 +44,7 @@ const CategoryCard = ({
           <span className="font-bold">{name}</span>
         </div>
         <div className="absolute 2xl:static left-[262px] top-[112px] flex 2xl:flex-row flex-col-reverse gap-y-[65px] 2xl:gap-y-0 2xl:gap-x-5">
-          {/* Map through cursors and pass the props to Cursor */}
+
           {cursors.map((cursorProps, index) => (
             <Cursor key={index} {...cursorProps} />
           ))}
