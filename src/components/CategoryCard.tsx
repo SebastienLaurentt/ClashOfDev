@@ -55,7 +55,7 @@ const CategoryCard = ({
         <div className="2xl:w-[987px] w-full 2xl:h-[696px] mr-5 rounded-[40px]">
           <img src={imgSrc} alt="aa" />
         </div>
-        <div className="mt-[26px] w-full 2xl:w-[241px] text-left flex flex-col gap-y-8">
+        <div className="mt-[20px] 2xl:w-[241px] text-left flex flex-col gap-y-8 text-[#262625]/60">
           <p>{paragraphe1}</p>
           <p>{paragraphe2}</p>
         </div>
@@ -64,7 +64,7 @@ const CategoryCard = ({
       <img
         src={logoSrc}
         alt=""
-        className="absolute 2xl:size-[412px] size-[180px] bottom-[-25px] 2xl:bottom-[-30px] right-0 2xl:right-[-12px]"
+        className="absolute 2xl:size-[412px] size-[180px] top-[482px] 2xl:top-[559px] left-[212px] 2xl:left-[1048px]"
         style={{ transform: "rotate(0deg)" }}
       />
     </div>

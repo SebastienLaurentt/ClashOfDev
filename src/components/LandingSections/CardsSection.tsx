@@ -1,24 +1,24 @@
 import ArtisteImg from "@/assets/artisteImg.svg";
 import BatisseurImg from "@/assets/batisseurImg.svg";
 import BlueLogo from "@/assets/blueLogo.svg";
+import BlueLogoBig from "@/assets/blueLogoBig.svg";
 import BossImg from "@/assets/bossImg.svg";
 import ChercheurImg from "@/assets/chercheurImg.svg";
 import GreenLogo from "@/assets/greenLogo.svg";
-import PurpleLogo from "@/assets/purpleLogo.svg";
+import GreenLogoBig from "@/assets/greenLogoBig.svg";
 import MaitreImg from "@/assets/maitreImg.svg";
 import PinkLogo from "@/assets/pinkLogo.svg";
 import PinkLogoBig from "@/assets/pinkLogoBig.svg";
-import GreenLogoBig from "@/assets/greenLogoBig.svg";
-import BlueLogoBig from "@/assets/blueLogoBig.svg";
+import PurpleLogo from "@/assets/purpleLogo.svg";
 import RedLogo from "@/assets/redLogo.svg";
-import YellowLogo from "@/assets/yellowLogo.svg";
 import SecretImg from "@/assets/secretImg.svg";
 import WhiteLogo from "@/assets/whiteLogo.svg";
+import YellowLogo from "@/assets/yellowLogo.svg";
 import CategoryCard from "../CategoryCard";
 
 const CardsSection = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-3 2xl:px-0 2xl:mb-10 mb-[59px]">
+    <section className="max-w-[1440px] mx-auto px-3 2xl:px-8 2xl:mb-10 mb-[59px]">
       <CategoryCard
         bgColor="bg-[#EBEDFF]"
         category="DESIGN"
@@ -27,8 +27,8 @@ const CardsSection = () => {
         imgSrc={ArtisteImg}
         paragraphe1=<>
           <span className="font-bold">Le design</span>, c’est son terrain de
-          jeu. Il maîtrise et retranscrit correctement chaque pixel de la
-          maquette.
+          jeu. <br className="2xl:hidden" /> Il maîtrise et retranscrit
+          correctement chaque pixel de la maquette.
         </>
         paragraphe2=<>
           Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing
@@ -53,11 +53,16 @@ const CardsSection = () => {
         pointsNumber="/6 pts"
         name="LE BÂTISSEUR DE CODE"
         imgSrc={BatisseurImg}
-        paragraphe1=<>
-          Ses lignes de code sont des fondations solides. C’est{" "}
-          <span className="font-bold">un maître du front</span>, capable de
-          structurer les systèmes les plus complexes sans se casser la tête.
-        </>
+        paragraphe1={
+          <>
+            <span className="whitespace-nowrap 2xl:whitespace-normal">
+              Ses lignes de code sont des fondations solides.
+            </span>{" "}
+            C’est <span className="font-bold">un maître du front</span>, capable
+            de structurer les systèmes les plus complexes sans se casser la
+            tête.
+          </>
+        }
         paragraphe2=<>
           <span className="font-bold">Maitre de VSCode</span>, il a surement
           fini le challenge en s’assurant d’avoir le code le plus clair et le
@@ -96,7 +101,7 @@ const CardsSection = () => {
           <span className="font-bold">le motion</span> mieux que n’importe qui.{" "}
         </>
         logoSrc={GreenLogoBig}
-                cursors={[
+        cursors={[
           {
             name: "Lina",
             bgColor: "#A2B87E",

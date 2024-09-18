@@ -17,8 +17,9 @@ const Cursor = ({ name, fontColor, bgColor, borderColor, classname }: CursorProp
       @{name}
       <MousePointer2
         size={14}
-        className="absolute top-[-14px] left-[-12px]"
-        style={{ fill: bgColor, color: bgColor }} 
+        className="absolute top-[-18px] left-[-16px] drop-shadow"
+        style={{ fill: bgColor, color: bgColor,transform: "rotate(10deg)" }} 
+
       />
     </span>
   );
