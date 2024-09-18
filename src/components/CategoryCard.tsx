@@ -1,4 +1,4 @@
-interface SectionProps {
+interface CategoryCardProps {
   bgColor: string;
   category: string;
   pointsNumber: string;
@@ -8,7 +8,7 @@ interface SectionProps {
   paragraphe2: JSX.Element;
 }
 
-const Section = ({
+const CategoryCard = ({
   bgColor,
   category,
   pointsNumber,
@@ -16,7 +16,7 @@ const Section = ({
   imgSrc,
   paragraphe1,
   paragraphe2,
-}: SectionProps) => {
+}: CategoryCardProps) => {
   return (
     <section
       className={`w-full h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px]`}
@@ -41,4 +41,4 @@ const Section = ({
   );
 };
 
-export default Section;
+export default CategoryCard;
