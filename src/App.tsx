@@ -1,4 +1,4 @@
-import SwitchLogo from "./assets/switchLogo.svg";
+import SwitchLogo from "@/assets/switchLogo.svg";
 import CardsSection from "./components/LandingSections/CardsSection";
 import HeroSection from "./components/LandingSections/HeroSection";
 import PiscineLogo from "./components/PiscineLogo";
