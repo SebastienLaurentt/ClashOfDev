@@ -3,7 +3,6 @@ import SwitchLogo from "../assets/switchLogo.svg";
 import PiscineLogo from "./PiscineLogo";
 import NumberTicker from "./ui/NumberTicker";
 
-
 function useScrollProgress() {
   const [progress, setProgress] = useState(0);
 
@@ -28,12 +27,16 @@ const Header = () => {
   const scrollProgress = useScrollProgress();
   return (
     <header className="flex flex-row justify-center">
-      <div className="fixed z-50 opacity-100 min-h-[40px] w-[366px] mx-auto 2xl:px-0 2xl:w-[1376px] flex flex-row justify-between items-center ">
-        <PiscineLogo />
-        <span className="font-bold text-[#262625]">
-          <NumberTicker scrollProgress={scrollProgress} />
-        </span>
-        <img src={SwitchLogo} alt="" />
+      {/* Conteneur parent avec gradient couvrant toute la largeur */}
+      <div className="fixed top-0 left-0 w-full pt-[46px] pb-8 2xl:pt-[38px] z-50 opacity-100 gradient-bottom-10">
+        {/* Conteneur enfant pour garder une largeur fixe pour les éléments */}
+        <div className="w-[366px] 2xl:w-[1376px] mx-auto flex flex-row justify-between items-center">
+          <PiscineLogo />
+          <span className="absolute w-full left-0 text-center font-bold text-[#262625]">
+            <NumberTicker scrollProgress={scrollProgress} />
+          </span>
+          <img src={SwitchLogo} alt="" />
+        </div>
       </div>
     </header>
   );

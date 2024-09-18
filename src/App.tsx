@@ -5,9 +5,9 @@ import HeroSection from "./components/LandingSections/HeroSection";
 
 function App() {
   return (
-    <main className="py-10 2xl:py-8 2xl:px-0 bg-[#F3F3F1] text-[#262625] font-medium overflow-x-hidden">
+    <main className="pb-10 2xl:pb-8 2xl:px-0 bg-[#F3F3F1] text-[#262625] font-medium overflow-x-hidden">
       <Header />
-      <section className="2xl:mb-[100px] mb-[101px] mt-[154px] 2xl:mt-[181px]">
+      <section className="2xl:mb-[100px] mb-[101px] mt-[194px] 2xl:mt-[213px]">
         <HeroSection />
       </section>
       <section className="2xl:max-w-[1440px] max-w-[366px] mx-auto 2xl:px-8 2xl:mb-10 mb-[59px]">
