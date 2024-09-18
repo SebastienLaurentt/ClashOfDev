@@ -35,6 +35,14 @@ const CardsSection = () => {
           </span>
         </>
         logoSrc={PurpleLogo}
+        cursors={[
+          {
+            name: "maislina_",
+            bgColor: "#9FA8FE",
+            borderColor: "#8A92E3",
+            fontColor: "text-[#FEFEFE]",
+          },
+        ]}
       />
       <CategoryCard
         bgColor="bg-[#FFEDF5]"
@@ -53,6 +61,20 @@ const CardsSection = () => {
           plus propre des 36 participants.
         </>
         logoSrc={PinkLogo}
+        cursors={[
+          {
+            name: "Lina",
+            bgColor: "#F588B9",
+            borderColor: "#D6699A",
+            fontColor: "text-[#FEFEFE]",
+          },
+          {
+            name: "Chris",
+            bgColor: "#F588B9",
+            borderColor: "#D6699A",
+            fontColor: "text-[#FEFEFE]",
+          },
+        ]}
       />
       <CategoryCard
         bgColor="bg-[#ECFFCE]"
@@ -71,6 +93,20 @@ const CardsSection = () => {
           <span className="font-bold">le motion</span> mieux que n’importe qui.{" "}
         </>
         logoSrc={GreenLogo}
+                cursors={[
+          {
+            name: "Lina",
+            bgColor: "#A2B87E",
+            borderColor: "#95AE6D",
+            fontColor: "text-[#FEFEFE]",
+          },
+          {
+            name: "Chris",
+            bgColor: "#A2B87E",
+            borderColor: "#95AE6D",
+            fontColor: "text-[#FEFEFE]",
+          },
+        ]}
       />
       <CategoryCard
         bgColor="bg-[#BADAFF]"
@@ -90,6 +126,20 @@ const CardsSection = () => {
           ne pourra pas le reprendre à l’inspection!
         </>
         logoSrc={BlueLogo}
+        cursors={[
+          {
+            name: "Lina",
+            bgColor: "#6B93C0",
+            borderColor: "#6B93C0",
+            fontColor: "text-[#BADAFF]",
+          },
+          {
+            name: "Chris",
+            bgColor: "#6B93C0",
+            borderColor: "#6B93C0",
+            fontColor: "text-[#BADAFF]",
+          },
+        ]}
       />
       <CategoryCard
         bgColor="bg-[#FFFAC2]"
@@ -108,6 +158,20 @@ const CardsSection = () => {
           <span className="font-bold">l’Easter Egg</span> au meilleur endroit.
         </>
         logoSrc={YellowLogo}
+        cursors={[
+          {
+            name: "Lina",
+            bgColor: "#CAC48E",
+            borderColor: "#C2BB82",
+            fontColor: "text-[#FFFAC2]",
+          },
+          {
+            name: "Chris",
+            bgColor: "#CAC48E",
+            borderColor: "#C2BB82",
+            fontColor: "text-[#FFFAC2]",
+          },
+        ]}
       />
       <CategoryCard
         bgColor="bg-[#FFBCAB]"
@@ -126,6 +190,20 @@ const CardsSection = () => {
           standing ovation du jury.{" "}
         </>
         logoSrc={RedLogo}
+        cursors={[
+          {
+            name: "Lina",
+            bgColor: "#F28164",
+            borderColor: "#D46F55",
+            fontColor: "text-[#FEFEFE]",
+          },
+          {
+            name: "Chris",
+            bgColor: "#F28164",
+            borderColor: "#D46F55",
+            fontColor: "text-[#FEFEFE]",
+          },
+        ]}
       />
       <section className="bg-[#262625] rounded-[60px] h-[600px] 2xl:h-[900px] relative">
         <div className="ml-[46px] 2xl:ml-[87px] pt-10 2xl:pt-[220px]">
