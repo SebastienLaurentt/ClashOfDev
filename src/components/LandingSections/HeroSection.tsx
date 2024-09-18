@@ -1,6 +1,6 @@
-import CardHero from "@/assets/cardHero.svg";
-import ClashVector from "@/assets/clashVector.svg";
-import StrongerVector from "@/assets/strongerVector.svg";
+import CardHero from "../../assets/cardHero.svg";
+import ClashVector from "../../assets/clashVector.svg";
+import StrongerVector from "../../assets/strongerVector.svg";
 
 const HeroSection = () => {
   return (
