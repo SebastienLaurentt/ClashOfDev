@@ -4,14 +4,19 @@ import NumberTicker from "./ui/NumberTicker";
 
 interface HeaderProps {
   scrollProgress: number;
+  isVisible: boolean;
 }
 
-const Header = ({ scrollProgress }: HeaderProps) => {
+const Header = ({ scrollProgress, isVisible }: HeaderProps) => {
   return (
-    <header className="fixed top-0 left-0 w-full pt-[46px] pb-8 2xl:pt-[38px] z-50 opacity-100 gradient-bottom-10">
+    <header className="fixed top-0 left-0 w-full pt-[46px] pb-8 2xl:pt-[38px] z-50 gradient-bottom-10">
       <div className="w-[366px] 2xl:w-[1376px] mx-auto flex flex-row justify-between items-center">
         <PiscineLogo />
-        <span className="absolute w-full left-0 text-center font-bold text-[#262625]">
+        <span
+          className={`absolute w-full left-0 text-center font-bold text-[#262625] transition-opacity duration-300 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <NumberTicker scrollProgress={scrollProgress} />
         </span>
         <img src={SwitchLogo} alt="Switch Logo" />
