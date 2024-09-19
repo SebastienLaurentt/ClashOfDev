@@ -3,5 +3,40 @@
 @tailwind utilities;
 
 .gradient-bottom-10 {
-  background: linear-gradient(to bottom, #F3F3F1 0%, #F3F3F1 80%, transparent 100%);
+  background: linear-gradient(
+    to bottom,
+    #f3f3f1 0%,
+    #f3f3f1 80%,
+    transparent 100%
+  );
+}
+
+.card-item {
+  position: sticky;
+  top: 48px;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-item.sticky {
+  transform: scale(0.9);
+}
+
+@media (max-width: 767px) {
+  .card-item {
+    top: 120px; 
+  }
+}
+
+.card-item:not(:first-child):not(.sticky) {
+  transform: translateY(100%);
+  
+  opacity: 0;
+}
+
+.card-item.sticky + .card-item {
+  transform: translateY(0);
+  transform: scale(0.9);
+  opacity: 1;
 }
