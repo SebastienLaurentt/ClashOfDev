@@ -23,11 +23,7 @@
   transform: scale(0.9);
 }
 
-@media (max-width: 767px) {
-  .card-item {
-    top: 120px; 
-  }
-}
+
 
 .card-item:not(:first-child):not(.sticky) {
   transform: translateY(100%);
@@ -37,6 +33,18 @@
 
 .card-item.sticky + .card-item {
   transform: translateY(0);
-  transform: scale(0.9);
+  transform: scale(1);
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .card-item {
+    top: 120px; 
+  }
+  .card-item.sticky + .card-item {
+    transform: scale(1);
+  }
+  .card-item.sticky {
+    transform: scale(1);
+  }
 }
