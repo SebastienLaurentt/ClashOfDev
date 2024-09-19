@@ -38,11 +38,11 @@ const CategoryCard = ({
       <div className="my-10 2xl:ml-[89px] ml-[47px] 2xl:mr-[61px] h-[44px] flex flex-row justify-between items-center">
         <div className="flex flex-row">
           <div className="flex flex-col items-start gap-y-1 w-[85px] 2xl:w-[155px] mr-2 2xl:mr-5">
-            <span className="hidden 2xl:block">{category}</span>
+            <span className="hidden 2xl:block ">{category}</span>
             <span className="2xl:hidden">NOS HÉROS</span>
             <span>{pointsNumber}</span>
           </div>
-          <span className="font-bold">{name}</span>
+          <span className="font-bold w-[179px] 2xl:w-full">{name}</span>
         </div>
         <div className="absolute 2xl:static left-[275px] top-[112px] flex 2xl:flex-row flex-col-reverse gap-y-[35px] 2xl:gap-y-0 2xl:gap-x-5">
           {cursors.map((cursorProps, index) => (
