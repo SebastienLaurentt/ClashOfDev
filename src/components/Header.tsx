@@ -9,11 +9,11 @@ interface HeaderProps {
 
 const Header = ({ scrollProgress, isVisible }: HeaderProps) => {
   return (
-    <header className="fixed top-0 left-0 w-full pt-[46px] pb-8 2xl:pt-[38px] z-50 gradient-bottom-10">
-      <div className="w-[366px] 2xl:w-[1376px] mx-auto flex flex-row justify-between items-center">
+    <header className="gradient-bottom-10 fixed left-0 top-0 z-50 w-full pb-8 pt-[46px] 2xl:pt-[38px]">
+      <div className="mx-auto flex w-[366px] flex-row items-center justify-between md:w-[720px] 2xl:w-[1376px]">
         <PiscineLogo />
         <span
-          className={`absolute w-full left-0 text-center font-bold text-foreground transition-opacity duration-300 ${
+          className={`absolute left-0 w-full text-center font-bold text-foreground transition-opacity duration-300 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >

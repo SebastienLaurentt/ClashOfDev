@@ -36,35 +36,36 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px] overflow-hidden`}
+      className={`relative h-[600px] rounded-[60px] 2xl:h-auto ${bgColor} flex flex-col overflow-hidden text-xs leading-[20px]`}
     >
-      <div className="my-10 2xl:ml-[89px] ml-[47px] 2xl:mr-[61px] h-[44px] flex flex-row justify-between items-center">
+      <div className="my-10 ml-[47px] flex h-[44px] flex-row items-center justify-between md:mx-[72px] md:my-4 2xl:my-10 2xl:ml-[89px] 2xl:mr-[61px] 2xl:h-[44px]">
         <div className="flex flex-row">
-          <div className="flex flex-col items-start gap-y-1 w-[85px] 2xl:w-[155px] mr-2 2xl:mr-5">
+          <div className="mr-2 flex w-[85px] flex-col items-start gap-y-1 md:w-[155px] 2xl:mr-5">
             <span className="hidden 2xl:block ">{category}</span>
             <span className="2xl:hidden">NOS HÉROS</span>
             <span>{pointsNumber}</span>
           </div>
-          <span className="font-bold w-[179px] 2xl:w-full">{name}</span>
+          <span className="w-[179px] font-bold md:w-full">{name}</span>
         </div>
-        <div className="absolute 2xl:static left-[275px] top-[112px] flex 2xl:flex-row flex-col-reverse gap-y-[35px] 2xl:gap-y-0 2xl:gap-x-5">
+        <div className="absolute left-[275px] top-[112px] flex flex-col-reverse gap-y-[35px] md:static md:flex-row md:gap-x-5 md:gap-y-0">
           {cursors.map((cursorProps, index) => (
             <Cursor key={index} {...cursorProps} />
           ))}
         </div>
       </div>
-      <div className="2xl:ml-10 2xl:mb-10 mx-[47px] flex flex-col 2xl:flex-row">
-        <div className="2xl:w-[987px] w-full 2xl:h-[696px] mr-5 rounded-[40px]">
+
+      <div className="mx-[47px] flex flex-col md:mx-[72px] 2xl:mx-[47px] 2xl:mb-10 2xl:ml-10 2xl:flex-row">
+        <div className="mr-5 w-full rounded-[40px] 2xl:h-[696px] 2xl:w-[987px]">
           <img
             src={imgSrc}
             alt={imgAlt}
             loading="lazy"
-            className="w-full h-full object-cover rounded-[40px]"
+            className="size-full rounded-[40px] object-cover"
           />
         </div>
-        <div className="mt-[20px] 2xl:w-[241px] text-left flex flex-col gap-y-8 text-[#262625]/60">
-          <p>{paragraphe1}</p>
-          <p>{paragraphe2}</p>
+        <div className="mt-[20px] flex flex-col gap-y-8 text-left text-[#262625]/60 md:w-[550px] md:flex-row md:gap-x-4 2xl:w-[241px] 2xl:flex-col">
+          <p >{paragraphe1}</p>
+          <p >{paragraphe2}</p>
         </div>
       </div>
 
@@ -72,7 +73,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         src={logoSrc}
         alt=""
         loading="lazy"
-        className="absolute 2xl:size-[412px] size-[180px] top-[482px] 2xl:top-[559px] left-[212px] 2xl:left-[1048px]"
+        className="absolute left-[212px] top-[482px] size-[180px] md:left-[600px] 2xl:left-[1048px] 2xl:top-[559px] 2xl:size-[412px]"
         style={{ transform: "rotate(0deg)" }}
       />
     </div>

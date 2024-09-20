@@ -43,7 +43,7 @@ const categoryCardData: CategoryCardData[] = [
     paragraphe1: (
       <>
         <span className="font-bold">Le design</span>, c’est son terrain de jeu.{" "}
-        <br className="2xl:hidden" /> Il maîtrise et retranscrit correctement
+        <br className="md:hidden" /> Il maîtrise et retranscrit correctement
         chaque pixel de la maquette.
       </>
     ),
@@ -229,7 +229,7 @@ const categoryCardData: CategoryCardData[] = [
     ),
     paragraphe2: (
       <>
-        Ce dev aux <span className="font-bold">multitalents</span> a reçu la
+        <span className="md:whitespace-nowrap 2xl:whitespace-normal">Ce dev aux <span className="font-bold">multitalents</span></span> a reçu la
         standing ovation du jury.
       </>
     ),
