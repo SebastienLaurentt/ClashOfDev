@@ -1,11 +1,40 @@
 import { MousePointer2 } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import CardHero from "../../assets/CardHero.svg";
 import BlankCardHero from "../../assets/blankCardHero.svg";
 import ClashVector from "../../assets/clashVector.svg";
 import StrongerVector from "../../assets/strongerVector.svg";
 import Cursor from "../Cursor";
 import BlurIn from "../ui/BlurIn";
+
+interface CursorComponentProps {
+  onClick: (e: React.MouseEvent) => void;
+  style: React.CSSProperties;
+}
+
+const CursorComponent = memo(({ onClick, style }: CursorComponentProps) => (
+  <span
+    className="absolute flex items-center px-3 py-1.5 text-xs text-primary-foreground border-2 rounded-[18.49px_1.54px_18.49px_18.49px] cursor-pointer"
+    style={{
+      backgroundColor: "#F588B9",
+      borderColor: "#D6699A",
+      transform: "translate(-50%, -50%)",
+      ...style,
+    }}
+    onClick={onClick}
+  >
+    @sometimecrea
+    <MousePointer2
+      size={14}
+      className="absolute top-[-18px] right-[-16px] drop-shadow"
+      style={{
+        fill: "#F588B9",
+        color: "#F588B9",
+        transform: "rotate(90deg)",
+      }}
+    />
+  </span>
+));
 
 const HeroSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -16,91 +45,69 @@ const HeroSection = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimate(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleCursorClick = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation();
+      if (customCursor) {
+        setCustomCursor(false);
+        const rect = containerRef.current?.getBoundingClientRect();
+        if (rect) {
+          setFixedPosition({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top,
+          });
+        }
+      } else {
+        setCustomCursor(true);
+        setMousePosition({ x: e.clientX, y: e.clientY });
+        setFixedPosition({ x: 0, y: 0 });
+      }
+    },
+    [customCursor]
+  );
+
+  useEffect(() => {
+    if (!customCursor) return;
 
     const updateMousePosition = (e: MouseEvent) => {
-      if (customCursor) {
-        setMousePosition({ x: e.clientX, y: e.clientY });
-      }
+      setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    if (customCursor) {
-      window.addEventListener("mousemove", updateMousePosition);
-      document.body.style.cursor = "none";
-    } else {
-      document.body.style.cursor = "auto";
-    }
+    window.addEventListener("mousemove", updateMousePosition);
+    document.body.style.cursor = "none";
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("mousemove", updateMousePosition);
       document.body.style.cursor = "auto";
     };
   }, [customCursor]);
 
-  const handleCursorClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (customCursor) {
-      setCustomCursor(false);
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (rect) {
-        setFixedPosition({
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top,
-        });
-      }
-    } else {
-      setCustomCursor(true);
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      setFixedPosition({ x: 0, y: 0 });
-    }
-  };
-
-  const renderCursor = () => (
-    <span
-      className="absolute flex items-center px-3 py-1.5 text-xs text-primary-foreground border-2 rounded-[18.49px_1.54px_18.49px_18.49px] cursor-pointer"
-      style={{
-        backgroundColor: "#F588B9",
-        borderColor: "#D6699A",
-        transform: "translate(-50%, -50%)",
-      }}
-      onClick={handleCursorClick}
-    >
-      @sometimecrea
-      <MousePointer2
-        size={14}
-        className="absolute top-[-18px] right-[-16px] drop-shadow"
-        style={{
-          fill: "#F588B9",
-          color: "#F588B9",
-          transform: "rotate(90deg)",
-        }}
-      />
-    </span>
-  );
-
   return (
     <div ref={containerRef} className="relative">
       {customCursor && (
-        <div
-          className="fixed z-50"
+        <CursorComponent
+          onClick={handleCursorClick}
           style={{
+            position: "fixed",
             left: `${mousePosition.x}px`,
             top: `${mousePosition.y}px`,
+            zIndex: 50,
           }}
-        >
-          {renderCursor()}
-        </div>
+        />
       )}
       {!customCursor && fixedPosition.x !== 0 && fixedPosition.y !== 0 && (
-        <div
-          className="absolute z-50"
+        <CursorComponent
+          onClick={handleCursorClick}
           style={{
+            position: "absolute",
             left: `${fixedPosition.x}px`,
             top: `${fixedPosition.y}px`,
+            zIndex: 50,
           }}
-        >
-          {renderCursor()}
-        </div>
+        />
       )}
       <div className="flex flex-col max-w-[366px] 2xl:max-w-[1376px] mx-auto 2xl:flex-row 2xl:justify-between 2xl:items-center mb-[100px] 2xl:mb-40">
         <div className="flex flex-col mb-10 2xl:mb-0 text-[74px] leading-[82px] 2xl:text-[115px] 2xl:leading-[123px] font-semibold text-foreground">
@@ -195,4 +202,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default memo(HeroSection);
