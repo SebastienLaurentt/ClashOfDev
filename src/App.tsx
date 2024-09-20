@@ -1,20 +1,40 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import CardsSection from "./components/LandingSections/CardsSection";
 import HeroSection from "./components/LandingSections/HeroSection";
 
-function App() {
+const App: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  const handleScroll = useCallback(() => {
+    const main = mainRef.current;
+    if (!main) return;
+
+    const cards = main.querySelectorAll(".card-item");
+    const lastCard = cards[cards.length - 1] as HTMLElement;
+    const footer = main.querySelector("footer") as HTMLElement;
+
+    const scrollHeight =
+      lastCard.offsetTop +
+      lastCard.offsetHeight -
+      main.clientHeight +
+      footer.offsetHeight;
+    const progress = Math.min(main.scrollTop / scrollHeight, 1);
+    setScrollProgress(progress);
+
+    if (main.scrollTop > scrollHeight) {
+      main.scrollTop = scrollHeight;
+    }
+  }, []);
 
   useEffect(() => {
     const main = mainRef.current;
     if (!main) return;
 
     const cards = main.querySelectorAll(".card-item");
-    const lastCard = cards[cards.length - 1];
     const footer = main.querySelector("footer");
 
     const observer = new IntersectionObserver(
@@ -27,9 +47,7 @@ function App() {
           }
         });
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
     cards.forEach((card, index) => {
@@ -50,20 +68,6 @@ function App() {
       footerObserver.observe(footer);
     }
 
-    const handleScroll = () => {
-      const scrollHeight =
-        (lastCard as HTMLElement).offsetTop +
-        (lastCard as HTMLElement).offsetHeight -
-        main.clientHeight +
-        (footer as HTMLElement).offsetHeight;
-      const progress = Math.min(main.scrollTop / scrollHeight, 1);
-      setScrollProgress(progress);
-
-      if (main.scrollTop > scrollHeight) {
-        main.scrollTop = scrollHeight;
-      }
-    };
-
     main.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -71,7 +75,7 @@ function App() {
       footerObserver.disconnect();
       main.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <>
@@ -92,6 +96,6 @@ function App() {
       </main>
     </>
   );
-}
+};
 
-export default App;
+export default React.memo(App);
