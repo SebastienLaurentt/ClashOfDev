@@ -11,7 +11,7 @@ interface CursorProps {
 const Cursor = ({ name, fontColor, bgColor, borderColor, classname }: CursorProps) => {
   return (
     <span
-      className={`w-fit relative flex border-2 items-center rounded-[1.54px_18.49px_18.49px_18.49px]  px-3 py-1.5 ${classname} ${fontColor} h-[30px]`}
+      className={`w-fit text-xs relative flex border-2 items-center rounded-[1.54px_18.49px_18.49px_18.49px]  px-3 py-1.5 ${classname} ${fontColor} h-[30px]`}
       style={{ backgroundColor: bgColor, borderColor: borderColor }} 
     >
       @{name}

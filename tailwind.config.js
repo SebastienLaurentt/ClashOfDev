@@ -13,7 +13,7 @@ export default {
         }
       },
       animation: {
-        slide: 'slide 14s linear infinite',
+        slide: 'slide 20s linear infinite',
       }
     },
   },
