@@ -2,7 +2,6 @@ import BlueLogo from "../assets/blueLogo.svg";
 import GreenLogo from "../assets/greenLogo.svg";
 import PinkLogo from "../assets/pinkLogo.svg";
 import WhiteLogo from "../assets/whiteLogo.svg";
-import { confettiSideCannons } from "./ui/confetti";
 
 const ClickMeCard = () => {
   return (
@@ -21,7 +20,7 @@ const ClickMeCard = () => {
       <div className="2xl:mt-[132px] mt-[125px] relative flex justify-center items-center mx-auto w-[185px] 2xl:w-[219px] h-[91px]">
         <button
           className="z-20 bg-[#F3F3F1] text-[13.67px] font-semibold rounded-[60px] w-[178px] h-[58px] 2xl:w-[212px]"
-          onClick={confettiSideCannons}
+          // onClick={confettiSideCannons}
         >
           Enter Next Level
         </button>
