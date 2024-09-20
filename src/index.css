@@ -15,61 +15,100 @@
   position: sticky;
   top: 48px;
   transition: all 0.3s ease;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   opacity: 1;
+  z-index: 1;
 }
 
 .card-item.sticky {
   transform: scale(0.9);
+  z-index: 2;
 }
 
-
-
-.card-item:not(:first-child):not(.sticky) {
-  transform: translateY(100%);
-  
+.card-item:not(.sticky):not(:first-child) {
+  transform: translateY(100%) scale(1);
   opacity: 0;
 }
 
-.card-item.sticky + .card-item {
-  transform: translateY(0);
-  transform: scale(0.9);
+.card-item.sticky + .card-item:not(.sticky) {
+  transform: translateY(0) scale(1);
   opacity: 1;
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
   .card-item {
-    top: 120px; 
-  }
-  .card-item.sticky + .card-item {
-    transform: scale(1);
+    top: 120px;
   }
   .card-item.sticky {
-    transform: scale(1);
+    transform: scale(0.9);
+  }
+  .card-item:not(.sticky):not(:first-child) {
+    transform: translateY(100%) scale(1);
+    opacity: 0;
+  }
+  .card-item.sticky + .card-item:not(.sticky) {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
-
 @keyframes moveCursor1 {
-  0%, 100% { transform: translate(0, 0); }
-  15% { transform: translate(30px, -20px); }
-  30% { transform: translate(40px, 10px); }
-  45% { transform: translate(30px, 30px); }
-  50%, 55% { transform: translate(30px, 30px); } /* Pause */
-  70% { transform: translate(-20px, 20px); }
-  85% { transform: translate(-30px, -10px); }
-  95% { transform: translate(-15px, -5px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(30px, -20px);
+  }
+  30% {
+    transform: translate(40px, 10px);
+  }
+  45% {
+    transform: translate(30px, 30px);
+  }
+  50%,
+  55% {
+    transform: translate(30px, 30px);
+  } /* Pause */
+  70% {
+    transform: translate(-20px, 20px);
+  }
+  85% {
+    transform: translate(-30px, -10px);
+  }
+  95% {
+    transform: translate(-15px, -5px);
+  }
 }
 
 @keyframes moveCursor2 {
-  0%, 100% { transform: translate(0, 0); }
-  20% { transform: translate(-35px, 25px); }
-  35% { transform: translate(-20px, -30px); }
-  40%, 45% { transform: translate(-20px, -30px); } /* Pause */
-  60% { transform: translate(30px, -15px); }
-  75% { transform: translate(40px, 20px); }
-  90% { transform: translate(20px, 30px); }
-  95% { transform: translate(10px, 15px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-35px, 25px);
+  }
+  35% {
+    transform: translate(-20px, -30px);
+  }
+  40%,
+  45% {
+    transform: translate(-20px, -30px);
+  } /* Pause */
+  60% {
+    transform: translate(30px, -15px);
+  }
+  75% {
+    transform: translate(40px, 20px);
+  }
+  90% {
+    transform: translate(20px, 30px);
+  }
+  95% {
+    transform: translate(10px, 15px);
+  }
 }
 
 .animate-cursor1 {
