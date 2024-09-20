@@ -1,3 +1,4 @@
+import React from "react";
 import Cursor from "./Cursor";
 
 interface CursorProps {
@@ -18,10 +19,10 @@ interface CategoryCardProps {
   paragraphe1: JSX.Element;
   paragraphe2: JSX.Element;
   logoSrc: string;
-  cursors: CursorProps[]; 
+  cursors: CursorProps[];
 }
 
-const CategoryCard = ({
+const CategoryCard: React.FC<CategoryCardProps> = ({
   bgColor,
   category,
   pointsNumber,
@@ -32,7 +33,7 @@ const CategoryCard = ({
   paragraphe2,
   logoSrc,
   cursors,
-}: CategoryCardProps) => {
+}) => {
   return (
     <div
       className={`relative h-[600px] 2xl:h-auto rounded-[60px] ${bgColor} flex flex-col text-xs leading-[20px] overflow-hidden`}
@@ -53,8 +54,13 @@ const CategoryCard = ({
         </div>
       </div>
       <div className="2xl:ml-10 2xl:mb-10 mx-[47px] flex flex-col 2xl:flex-row">
-        <div className="2xl:w-[987px] w-full 2xl:h-[696px]  mr-5 rounded-[40px]">
-          <img src={imgSrc} alt={imgAlt} />
+        <div className="2xl:w-[987px] w-full 2xl:h-[696px] mr-5 rounded-[40px]">
+          <img
+            src={imgSrc}
+            alt={imgAlt}
+            loading="lazy"
+            className="w-full h-full object-cover rounded-[40px]"
+          />
         </div>
         <div className="mt-[20px] 2xl:w-[241px] text-left flex flex-col gap-y-8 text-[#262625]/60">
           <p>{paragraphe1}</p>
@@ -64,8 +70,8 @@ const CategoryCard = ({
 
       <img
         src={logoSrc}
-        // Pas de alt car l'image est un logo (non sé)
         alt=""
+        loading="lazy"
         className="absolute 2xl:size-[412px] size-[180px] top-[482px] 2xl:top-[559px] left-[212px] 2xl:left-[1048px]"
         style={{ transform: "rotate(0deg)" }}
       />
