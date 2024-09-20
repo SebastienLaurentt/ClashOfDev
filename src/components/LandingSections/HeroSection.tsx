@@ -1,5 +1,5 @@
 import { MousePointer2 } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CardHero from "../../assets/CardHero.svg";
 import BlankCardHero from "../../assets/blankCardHero.svg";
 import ClashVector from "../../assets/clashVector.svg";
@@ -11,16 +11,16 @@ const HeroSection = () => {
   const [animate, setAnimate] = useState(false);
   const [customCursor, setCustomCursor] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [placedCursor, setPlacedCursor] = useState<{
-    x: number;
-    y: number;
-  } | null>(null);
+  const [fixedPosition, setFixedPosition] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimate(true), 500);
 
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      if (customCursor) {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+      }
     };
 
     if (customCursor) {
@@ -39,68 +39,69 @@ const HeroSection = () => {
 
   const handleCursorClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCustomCursor(true);
-    setPlacedCursor(null);
-  };
-
-  const handlePageClick = (e: React.MouseEvent) => {
     if (customCursor) {
-      setPlacedCursor({ x: e.clientX, y: e.clientY });
       setCustomCursor(false);
-    } else if (placedCursor) {
-      const clickX = e.clientX;
-      const clickY = e.clientY;
-      const cursorX = placedCursor.x;
-      const cursorY = placedCursor.y;
-
-      if (Math.abs(clickX - cursorX) < 50 && Math.abs(clickY - cursorY) < 50) {
-        setCustomCursor(true);
-        setPlacedCursor(null);
+      const rect = containerRef.current?.getBoundingClientRect();
+      if (rect) {
+        setFixedPosition({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+        });
       }
+    } else {
+      setCustomCursor(true);
+      setMousePosition({ x: e.clientX, y: e.clientY });
+      setFixedPosition({ x: 0, y: 0 });
     }
   };
 
-  const renderCursor = (x: number, y: number, isPlaced: boolean) => (
-    <div
-      className={`fixed ${
-        isPlaced ? "pointer-events-auto cursor-pointer" : "pointer-events-none"
-      } z-50`}
+  const renderCursor = () => (
+    <span
+      className="absolute flex items-center px-3 py-1.5 text-xs text-[#FEFEFE] border-2 rounded-[18.49px_1.54px_18.49px_18.49px] cursor-pointer"
       style={{
-        left: `${x}px`,
-        top: `${y}px`,
-        width: "100px",
-        height: "50px",
+        backgroundColor: "#F588B9",
+        borderColor: "#D6699A",
+        transform: "translate(-50%, -50%)",
       }}
-      onClick={isPlaced ? handleCursorClick : undefined}
+      onClick={handleCursorClick}
     >
-      <span
-        className="absolute flex items-center px-3 py-1.5 text-xs text-[#FEFEFE] border-2 rounded-[18.49px_1.54px_18.49px_18.49px]"
+      @sometimecrea
+      <MousePointer2
+        size={14}
+        className="absolute top-[-18px] right-[-16px] drop-shadow"
         style={{
-          backgroundColor: "#F588B9",
-          borderColor: "#D6699A",
-          transform: "translate(-50%, -50%)",
+          fill: "#F588B9",
+          color: "#F588B9",
+          transform: "rotate(90deg)",
         }}
-      >
-        @sometimecrea
-        <MousePointer2
-          size={14}
-          className="absolute top-[-18px] right-[-16px] drop-shadow"
-          style={{
-            fill: "#F588B9",
-            color: "#F588B9",
-            transform: "rotate(90deg)",
-          }}
-        />
-      </span>
-    </div>
+      />
+    </span>
   );
 
   return (
-    <div onClick={handlePageClick}>
-      {customCursor &&
-        !placedCursor &&
-        renderCursor(mousePosition.x, mousePosition.y, false)}
-      {placedCursor && renderCursor(placedCursor.x, placedCursor.y, true)}
+    <div ref={containerRef} className="relative">
+      {customCursor && (
+        <div
+          className="fixed z-50"
+          style={{
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`,
+          }}
+        >
+          {renderCursor()}
+        </div>
+      )}
+      {!customCursor && fixedPosition.x !== 0 && fixedPosition.y !== 0 && (
+        <div
+          className="absolute z-50"
+          style={{
+            left: `${fixedPosition.x}px`,
+            top: `${fixedPosition.y}px`,
+          }}
+        >
+          {renderCursor()}
+        </div>
+      )}
       <div className="flex flex-col max-w-[366px] 2xl:max-w-[1376px] mx-auto 2xl:flex-row 2xl:justify-between 2xl:items-center mb-[100px] 2xl:mb-40">
         <div className="flex flex-col mb-10 2xl:mb-0 text-[74px] leading-[82px] 2xl:text-[115px] 2xl:leading-[123px] font-semibold text-[#262625]">
           <span className="2xl:hidden">
@@ -151,9 +152,9 @@ const HeroSection = () => {
               animate ? "animate-cursor2" : ""
             }`}
           />
-          {!customCursor && !placedCursor && (
+          {!customCursor && fixedPosition.x === 0 && fixedPosition.y === 0 && (
             <span
-              className={`w-fit text-xs absolute flex border-2 items-center rounded-[18.49px_1.54px_18.49px_18.49px] bottom-[35px] left-[-20px] px-3 py-1.5 text-[#FEFEFE] h-[30px] cursor-pointer`}
+              className={`w-fit text-xs hidden absolute 2xl:flex border-2 items-center rounded-[18.49px_1.54px_18.49px_18.49px] bottom-[35px] left-[-20px] px-3 py-1.5 text-[#FEFEFE] h-[30px] cursor-pointer`}
               style={{ backgroundColor: "#F588B9", borderColor: "#D6699A" }}
               onClick={handleCursorClick}
             >
