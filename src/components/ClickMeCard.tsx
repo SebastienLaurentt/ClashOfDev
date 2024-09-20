@@ -7,9 +7,9 @@ import { confettiSideCannons } from "./ui/confetti";
 const ClickMeCard = () => {
   return (
     <div className="bg-primary rounded-[60px] h-[600px] 2xl:h-[900px] relative">
-      <div className="ml-[46px] 2xl:ml-[87px] pt-10 2xl:pt-[220px] text-primary-foreground">
-        <span className="ml-0.5 2xl:ml-0">/ FINALE02</span>
-        <p className="mt-[130px] text-justify 2xl:mt-0 font-semibold flex 2xl:h-[372px] flex-col justify-center text-[40px] leading-[48px] 2xl:text-[115px] 2xl:leading-[123px] w-[272px] 2xl:w-[1172px]">
+      <div className="ml-[46px] 2xl:ml-[87px] pt-10 2xl:pt-[220px]">
+        <span className="ml-0.5 2xl:ml-0 text-primary-foreground">/ FINALE02</span>
+        <p className="mt-[130px] text-justify 2xl:mt-0 font-semibold flex 2xl:h-[372px] flex-col justify-center text-[40px] leading-[48px] 2xl:text-[115px] 2xl:leading-[123px] text-[#F3F3F1] w-[272px] 2xl:w-[1172px]">
           Click Me ? Might enter the finals{" "}
         </p>
       </div>
