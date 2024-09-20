@@ -154,9 +154,13 @@ const HeroSection = () => {
           />
           {!customCursor && fixedPosition.x === 0 && fixedPosition.y === 0 && (
             <span
-              className={`w-fit text-xs hidden absolute 2xl:flex border-2 items-center rounded-[18.49px_1.54px_18.49px_18.49px] bottom-[35px] left-[-20px] px-3 py-1.5 text-[#FEFEFE] h-[30px] cursor-pointer`}
+              className={`w-fit text-xs absolute 2xl:flex border-2 items-center rounded-[18.49px_1.54px_18.49px_18.49px] bottom-[35px] left-[-20px] px-3 py-1.5 text-[#FEFEFE] h-[30px] 2xl:cursor-pointer`}
               style={{ backgroundColor: "#F588B9", borderColor: "#D6699A" }}
-              onClick={handleCursorClick}
+              onClick={(e) => {
+                if (window.innerWidth > 768) {
+                  handleCursorClick(e);
+                }
+              }}
             >
               @sometimecrea
               <MousePointer2
