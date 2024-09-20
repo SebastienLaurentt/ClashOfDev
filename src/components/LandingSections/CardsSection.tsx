@@ -19,6 +19,7 @@ const CardsSection = () => {
             pointsNumber={card.pointsNumber}
             name={card.name}
             imgSrc={card.imgSrc}
+            imgAlt={card.imgAlt}
             paragraphe1={card.paragraphe1}
             paragraphe2={card.paragraphe2}
             logoSrc={card.logoSrc}

@@ -57,7 +57,7 @@ const HeroSection = () => {
 
   const renderCursor = () => (
     <span
-      className="absolute flex items-center px-3 py-1.5 text-xs text-[#FEFEFE] border-2 rounded-[18.49px_1.54px_18.49px_18.49px] cursor-pointer"
+      className="absolute flex items-center px-3 py-1.5 text-xs text-primary-foreground border-2 rounded-[18.49px_1.54px_18.49px_18.49px] cursor-pointer"
       style={{
         backgroundColor: "#F588B9",
         borderColor: "#D6699A",
@@ -133,7 +133,7 @@ const HeroSection = () => {
           <img src={CardHero} alt="" className="2xl:h-[356px] 2xl:w-[368px]" />
         </div>
         <div className="relative h-[356px] 2xl:w-[368px] w-[366px] ml-[26px]">
-          <img src={BlankCardHero} alt="" className="" />
+          <img src={BlankCardHero} alt="Carte de jeu blanche avec couronne" className="" />
           <Cursor
             name="maislina_"
             bgColor="#F28164"
@@ -185,6 +185,7 @@ const HeroSection = () => {
             backgroundImage: `url(${ClashVector})`,
             backgroundRepeat: "repeat-x",
           }}
+          aria-label="Slogan de Clash of Dev : 'Attrapez les tous ! Clash of Dev"
         />
       </div>
     </div>

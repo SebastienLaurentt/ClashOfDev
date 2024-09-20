@@ -78,7 +78,7 @@ function App() {
       <Header scrollProgress={scrollProgress} isVisible={!isFooterVisible} />
       <main
         ref={mainRef}
-        className="h-screen overflow-y-auto overflow-x-hidden bg-[#F3F3F1] text-[#262625] font-medium"
+        className="h-screen overflow-y-auto overflow-x-hidden bg-background text-foreground font-medium"
       >
         <div className="min-h-screen 2xl:px-0">
           <section className="2xl:mb-[100px] mb-[101px] mt-[194px] 2xl:mt-[213px]">

@@ -13,13 +13,13 @@ const Header = ({ scrollProgress, isVisible }: HeaderProps) => {
       <div className="w-[366px] 2xl:w-[1376px] mx-auto flex flex-row justify-between items-center">
         <PiscineLogo />
         <span
-          className={`absolute w-full left-0 text-center font-bold text-[#262625] transition-opacity duration-300 ${
+          className={`absolute w-full left-0 text-center font-bold text-foreground transition-opacity duration-300 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
           <NumberTicker scrollProgress={scrollProgress} />
         </span>
-        <img src={SwitchLogo} alt="Switch Logo" />
+        <img src={SwitchLogo} alt="Logo de Clash of Dev dans un toogle" />
       </div>
     </header>
   );

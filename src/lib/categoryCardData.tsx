@@ -25,6 +25,7 @@ export interface CategoryCardData {
   pointsNumber: string;
   name: string;
   imgSrc: string;
+  imgAlt: string;
   paragraphe1: JSX.Element;
   paragraphe2: JSX.Element;
   logoSrc: string;
@@ -38,6 +39,7 @@ const categoryCardData: CategoryCardData[] = [
     pointsNumber: "/6 pts",
     name: "L’ARTISTE DE RENOM",
     imgSrc: ArtisteImg,
+    imgAlt: "Artiste peintre avec un béret, une moustance, des lunettes et bien habillé en train de peindre",
     paragraphe1: (
       <>
         <span className="font-bold">Le design</span>, c’est son terrain de jeu.{" "}
@@ -70,6 +72,7 @@ const categoryCardData: CategoryCardData[] = [
     pointsNumber: "/6 pts",
     name: "LE BÂTISSEUR DE CODE",
     imgSrc: BatisseurImg,
+    imgAlt: "Batisseur dans la forêt avec sa trousse à outils et un marteau",
     paragraphe1: (
       <>
         <span className="whitespace-nowrap 2xl:whitespace-normal">
@@ -102,6 +105,7 @@ const categoryCardData: CategoryCardData[] = [
     pointsNumber: "/3 pts",
     name: "LE MAITRE DE LA FLUIDITÉ",
     imgSrc: MaitreImg,
+    imgAlt: "Fée qui danse dans la forêt",
     paragraphe1: (
       <>
         Aucun composant ne s’affiche sans une{" "}
@@ -139,6 +143,7 @@ const categoryCardData: CategoryCardData[] = [
     pointsNumber: "/2 pts",
     name: "LE CHERCHEUR DE BREAKPOINT",
     imgSrc: ChercheurImg,
+    imgAlt: "Magicienne avec son chapeau, son sac et sa loupe",
     paragraphe1: (
       <>
         Quelle que soit la taille de l’écran, il garantit une expérience
@@ -176,6 +181,7 @@ const categoryCardData: CategoryCardData[] = [
     pointsNumber: "/3 pts",
     name: "LE MAITRE DES SECRETS",
     imgSrc: SecretImg,
+    imgAlt: "Magicienne avec son chapeau, sa baguette magique et son livre magique",
     paragraphe1: (
       <>
         Derrière une ligne de code bien choisie se cache un{" "}
@@ -212,6 +218,7 @@ const categoryCardData: CategoryCardData[] = [
     pointsNumber: "/ Infinite pts",
     name: "LE SUR-BOOSTED",
     imgSrc: BossImg,
+    imgAlt: "Chevalier avec son épée et son bouclier et sa couronne",
     paragraphe1: (
       <>
         Il excelle dans tous les domaines, alliant design, propreté de code,

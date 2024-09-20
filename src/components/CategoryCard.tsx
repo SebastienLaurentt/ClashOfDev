@@ -14,6 +14,7 @@ interface CategoryCardProps {
   pointsNumber: string;
   name: string;
   imgSrc: string;
+  imgAlt: string;
   paragraphe1: JSX.Element;
   paragraphe2: JSX.Element;
   logoSrc: string;
@@ -26,6 +27,7 @@ const CategoryCard = ({
   pointsNumber,
   name,
   imgSrc,
+  imgAlt,
   paragraphe1,
   paragraphe2,
   logoSrc,
@@ -52,7 +54,7 @@ const CategoryCard = ({
       </div>
       <div className="2xl:ml-10 2xl:mb-10 mx-[47px] flex flex-col 2xl:flex-row">
         <div className="2xl:w-[987px] w-full 2xl:h-[696px]  mr-5 rounded-[40px]">
-          <img src={imgSrc} alt="aa"  />
+          <img src={imgSrc} alt={imgAlt} />
         </div>
         <div className="mt-[20px] 2xl:w-[241px] text-left flex flex-col gap-y-8 text-[#262625]/60">
           <p>{paragraphe1}</p>
@@ -62,6 +64,7 @@ const CategoryCard = ({
 
       <img
         src={logoSrc}
+        // Pas de alt car l'image est un logo (non sé)
         alt=""
         className="absolute 2xl:size-[412px] size-[180px] top-[482px] 2xl:top-[559px] left-[212px] 2xl:left-[1048px]"
         style={{ transform: "rotate(0deg)" }}

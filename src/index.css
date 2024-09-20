@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --background: #F3F3F1;
+  --foreground: #262625;
+  --primary: #262625;
+  --primary-foreground: #F3F3F1;
+
+}
+
 .gradient-bottom-10 {
   background: linear-gradient(
     to bottom,
