@@ -1,6 +1,5 @@
 import { MousePointer2 } from "lucide-react";
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
-import CardHero from "../../assets/CardHero.svg";
 import BlankCardHero from "../../assets/blankCardHero.svg";
 import ClashVector from "../../assets/clashVector.svg";
 import StrongerVector from "../../assets/strongerVector.svg";
@@ -136,14 +135,16 @@ const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="hidden">
-          <img src={CardHero} alt="" className="2xl:h-[356px] 2xl:w-[368px]" />
-        </div>
         <div className="relative h-[356px] 2xl:w-[368px] w-[366px] ml-[26px]">
           <img
             src={BlankCardHero}
             alt="Carte de jeu blanche avec couronne"
             className=""
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width={368}
+            height={356}
           />
           <Cursor
             name="maislina_"

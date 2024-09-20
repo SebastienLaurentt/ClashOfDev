@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import CardsSection from "./components/LandingSections/CardsSection";
 import HeroSection from "./components/LandingSections/HeroSection";
 
-const App: React.FC = () => {
+const App = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
