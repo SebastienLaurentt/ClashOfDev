@@ -88,7 +88,7 @@ const App = () => {
           <section className="mb-[101px] mt-[194px] 2xl:mb-[100px] 2xl:mt-[213px]">
             <HeroSection />
           </section>
-          <section className="mx-auto w-[366px] md:w-[720px] lg:w-[960px] 2xl:w-[1376px]">
+          <section className="mx-auto w-[366px] md:w-[720px] lg:w-[960px] xl:w-[720px] 2xl:w-[1376px]">
             <CardsSection />
           </section>
         </div>

@@ -68,6 +68,12 @@
   }
 }
 
+@media (max-width: 1439px) {
+  .card-item {
+    top: 80px;
+  }
+}
+
 @keyframes moveCursor1 {
   0%,
   100% {
