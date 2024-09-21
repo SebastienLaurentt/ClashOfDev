@@ -5,7 +5,7 @@ import ClashVector from "../../assets/clashVector.svg";
 import CodVector from "../../assets/codVector.svg";
 import StrongerVector from "../../assets/strongerVector.svg";
 import Cursor from "../Cursor";
-import BlurIn from "../ui/BlurIn";
+import Sparkle from "../ui/Sparkle";
 
 interface CursorComponentProps {
   onClick: (e: React.MouseEvent) => void;
@@ -130,9 +130,9 @@ const HeroSection = () => {
               alt=""
               className="hidden h-[80px] w-[103px] md:block 2xl:ml-[28px] 2xl:mr-[45px]"
             />{" "}
-            <BlurIn
+            <Sparkle
               className="text-[74px] font-semibold italic leading-[82px] text-foreground lg:text-[68px] xl:text-[92px] xl:leading-[100px] 2xl:text-[115px] 2xl:leading-[123px]"
-              word="l'emporte!"
+              text="l'emporte!"
             />
           </div>
         </div>

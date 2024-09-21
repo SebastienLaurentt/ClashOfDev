@@ -61,7 +61,7 @@ const App = () => {
       ([entry]) => {
         setIsFooterVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 1 }
     );
 
     if (footer) {
