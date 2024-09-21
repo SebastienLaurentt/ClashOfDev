@@ -2,6 +2,7 @@ import { MousePointer2 } from "lucide-react";
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import BlankCardHero from "../../assets/blankCardHero.svg";
 import ClashVector from "../../assets/clashVector.svg";
+import CodVector from "../../assets/codVector.svg";
 import StrongerVector from "../../assets/strongerVector.svg";
 import Cursor from "../Cursor";
 import BlurIn from "../ui/BlurIn";
@@ -145,6 +146,16 @@ const HeroSection = () => {
             decoding="async"
             width={310}
             height={356}
+          />
+          <img
+            src={CodVector}
+            alt="Logo Clash of Code"
+            className="absolute left-[230px] top-[14px] md:left-[252px] md:top-[20px]"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width={70}
+            height={73}
           />
           <Cursor
             name="maislina_"
