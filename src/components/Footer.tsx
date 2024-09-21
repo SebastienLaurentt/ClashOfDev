@@ -9,9 +9,12 @@ const Footer = ({ scrollProgress }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative min-h-[40px] pb-[46px] pt-[65px] 2xl:pt-[46px] 2xl:pb-[38px] w-[366px] md:w-[720px] flex flex-row justify-between mx-auto 2xl:w-[1376px] items-center">
+    <footer className="relative mx-auto flex min-h-[40px] w-[366px] flex-row items-center justify-between pb-[46px] pt-[65px] md:w-[720px] lg:w-[960px]  2xl:w-[1376px] 2xl:pb-[38px] 2xl:pt-[46px]">
       <PiscineLogo />
-      <NumberTicker scrollProgress={scrollProgress} className="font-bold 2xl:text-center 2xl:w-full 2xl:absolute" />
+      <NumberTicker
+        scrollProgress={scrollProgress}
+        className="font-bold 2xl:absolute 2xl:w-full 2xl:text-center"
+      />
       <span className="font-bold">@{currentYear}</span>
     </footer>
   );

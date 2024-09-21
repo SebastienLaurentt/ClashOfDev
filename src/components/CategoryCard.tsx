@@ -36,9 +36,9 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative h-[600px] rounded-[60px] 2xl:h-auto ${bgColor} flex flex-col overflow-hidden text-xs leading-[20px]`}
+      className={`relative h-[600px] rounded-[60px] md:h-[650px] lg:h-[820px] xl:h-[600px] 2xl:h-auto ${bgColor} flex flex-col overflow-hidden text-xs leading-[20px]`}
     >
-      <div className="my-10 ml-[47px] flex h-[44px] flex-row items-center justify-between md:mx-[72px] md:my-4 2xl:my-10 2xl:ml-[89px] 2xl:mr-[61px] 2xl:h-[44px]">
+      <div className="my-10 ml-[47px] flex h-[44px] flex-row items-center justify-between md:mx-[72px] 2xl:ml-[89px] 2xl:mr-[61px] 2xl:h-[44px]">
         <div className="flex flex-row">
           <div className="mr-2 flex w-[85px] flex-col items-start gap-y-1 md:w-[155px] 2xl:mr-5">
             <span className="hidden 2xl:block ">{category}</span>
@@ -63,9 +63,9 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             className="size-full rounded-[40px] object-cover"
           />
         </div>
-        <div className="mt-[20px] flex flex-col gap-y-8 text-left text-[#262625]/60 md:w-[550px] md:flex-row md:gap-x-4 2xl:w-[241px] 2xl:flex-col">
-          <p >{paragraphe1}</p>
-          <p >{paragraphe2}</p>
+        <div className="mt-[20px] flex flex-col gap-y-8 text-left text-[#262625]/60 md:w-[550px] md:flex-row md:gap-x-4 lg:w-[700px] 2xl:w-[241px] 2xl:flex-col">
+          <p>{paragraphe1}</p>
+          <p>{paragraphe2}</p>
         </div>
       </div>
 
@@ -73,7 +73,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         src={logoSrc}
         alt=""
         loading="lazy"
-        className="absolute left-[212px] top-[482px] size-[180px] md:left-[600px] 2xl:left-[1048px] 2xl:top-[559px] 2xl:size-[412px]"
+        className="absolute left-[212px] top-[482px] size-[180px] md:left-[590px] md:top-[520px] lg:left-[810px] lg:top-[690px] 2xl:left-[1048px] 2xl:top-[559px] 2xl:size-[412px]"
         style={{ transform: "rotate(0deg)" }}
       />
     </div>

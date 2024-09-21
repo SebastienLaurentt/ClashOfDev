@@ -82,13 +82,13 @@ const App = () => {
       <Header scrollProgress={scrollProgress} isVisible={!isFooterVisible} />
       <main
         ref={mainRef}
-        className="h-screen overflow-y-auto overflow-x-hidden bg-background text-foreground font-medium"
+        className="h-screen overflow-y-auto overflow-x-hidden bg-background font-medium text-foreground"
       >
         <div className="min-h-screen 2xl:px-0">
-          <section className="2xl:mb-[100px] mb-[101px] mt-[194px] 2xl:mt-[213px]">
+          <section className="mb-[101px] mt-[194px] 2xl:mb-[100px] 2xl:mt-[213px]">
             <HeroSection />
           </section>
-          <section className="2xl:w-[1376px] md:w-[720px] w-[366px] mx-auto">
+          <section className="mx-auto w-[366px] md:w-[720px] lg:w-[960px] 2xl:w-[1376px]">
             <CardsSection />
           </section>
         </div>

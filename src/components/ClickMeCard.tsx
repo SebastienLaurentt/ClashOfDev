@@ -6,19 +6,19 @@ import { confettiSideCannons } from "./ui/confetti";
 
 const ClickMeCard = () => {
   return (
-    <div className="relative h-[600px] rounded-[60px] bg-primary 2xl:h-[900px]">
+    <div className="relative h-[600px] rounded-[60px] bg-primary md:h-[650px] lg:h-[820px] 2xl:h-[900px]">
       <div className="ml-[46px] pt-10 2xl:ml-[87px] 2xl:pt-[220px]">
         <span className="ml-0.5 text-primary-foreground 2xl:ml-0">
           / FINALE02
         </span>
-        <p className="mt-[130px] flex w-[272px] flex-col justify-center text-justify text-[40px] font-semibold leading-[48px] text-[#F3F3F1] md:w-[650px] md:text-[80px] md:leading-[80px] 2xl:mt-0 2xl:h-[372px] 2xl:w-[1172px] 2xl:text-[115px] 2xl:leading-[123px]">
+        <p className="mt-[130px] flex w-[272px] flex-col justify-center text-justify text-[40px] font-semibold leading-[48px] text-[#F3F3F1] md:w-[650px] md:text-[80px] md:leading-[84px]  lg:w-[800px] lg:text-[104px] lg:leading-[120px] 2xl:mt-0 2xl:h-[372px] 2xl:w-[1172px] 2xl:text-[115px] 2xl:leading-[123px]">
           Click Me ? Might enter the finals{" "}
         </p>
       </div>
       <img
         src={WhiteLogo}
         alt=""
-        className="absolute left-[241px] top-[90.28px] h-[49.56px] w-[53.55px] md:left-[550px] md:top-[400px] 2xl:left-[1061.97px] 2xl:top-[516.14px]"
+        className="absolute left-[241px] top-[90.28px] h-[49.56px] w-[53.55px] md:left-[550px] md:top-[400px] lg:left-[780px] lg:top-[520px] 2xl:left-[1061.97px] 2xl:top-[516.14px]"
       />
       <div className="relative mx-auto mt-[125px] flex h-[91px] w-[185px] items-center justify-center 2xl:mt-[132px] 2xl:w-[219px]">
         <button

@@ -108,8 +108,8 @@ const HeroSection = () => {
           }}
         />
       )}
-      <div className="mx-auto mb-[100px] flex w-[366px] flex-col md:w-[720px] md:items-center 2xl:mb-40 2xl:w-[1376px] 2xl:flex-row 2xl:justify-between">
-        <div className="mb-10 flex flex-col text-[74px] font-semibold leading-[82px] text-foreground 2xl:mb-0 2xl:text-[115px] 2xl:leading-[123px]">
+      <div className="mx-auto mb-[100px] flex w-[366px] flex-col md:w-[720px] md:items-center lg:w-[960px] lg:flex-row lg:justify-between 2xl:mb-40 2xl:w-[1376px]">
+        <div className="mb-10 flex flex-col text-[74px] font-semibold leading-[82px] text-foreground lg:text-[68px] xl:text-[74px] 2xl:mb-0 2xl:text-[115px] 2xl:leading-[123px]">
           <span className="md:hidden">
             <span className="flex flex-row items-center justify-between">
               Que le
@@ -130,7 +130,7 @@ const HeroSection = () => {
               className="hidden h-[80px] w-[103px] md:block 2xl:ml-[28px] 2xl:mr-[45px]"
             />{" "}
             <BlurIn
-              className="text-[74px] font-semibold italic leading-[82px] text-foreground 2xl:text-[115px] 2xl:leading-[123px]"
+              className="text-[74px] font-semibold italic leading-[82px] text-foreground lg:text-[68px] xl:text-[74px] 2xl:text-[115px] 2xl:leading-[123px]"
               word="l'emporte!"
             />
           </div>
