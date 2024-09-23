@@ -10,7 +10,7 @@ const CardsSection = () => {
       {categoryCardData.map((card: CategoryCardData, index: number) => (
         <div
           key={index}
-          className="card-item"
+          className="card-item 2xl:mb-1"
           style={{ zIndex: index + 2 }} 
         >
           <CategoryCard
