@@ -1,7 +1,7 @@
 import { MousePointer2 } from "lucide-react";
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import BlankCardHero from "../../assets/blankCardHero.svg";
-import ClashVector from "../../assets/clashVector.svg";
+import ClashVector from "../../assets/clashVector2.svg";
 import CodVector from "../../assets/codVector.svg";
 import StrongerVector from "../../assets/strongerVector.svg";
 import Cursor from "../Cursor";
@@ -204,7 +204,7 @@ const HeroSection = () => {
         <div
           className="h-full animate-slide whitespace-nowrap"
           style={{
-            width: "7352.32px",
+            width: "7402.32px",
             backgroundImage: `url(${ClashVector})`,
             backgroundRepeat: "repeat-x",
           }}

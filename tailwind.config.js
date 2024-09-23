@@ -17,7 +17,7 @@ export default {
       keyframes: {
         slide: {
           '0%': { transform: 'translate(0)' },
-          '100%': { transform: 'translate(-3676.16px)' },  
+          '100%': { transform: 'translate(-3701.16px)' },  
         }
       },
       animation: {
