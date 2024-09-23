@@ -10,11 +10,14 @@ import Sparkle from "../ui/Sparkle";
 interface CursorComponentProps {
   onClick: (e: React.MouseEvent) => void;
   style: React.CSSProperties;
+  customCursor: boolean; 
 }
 
-const CursorComponent = memo(({ onClick, style }: CursorComponentProps) => (
+const CursorComponent = memo(({ onClick, style, customCursor }: CursorComponentProps) => (
   <span
-    className="absolute flex cursor-pointer items-center rounded-[18.49px_1.54px_18.49px_18.49px] border-2 px-3 py-1.5 text-xs text-primary-foreground"
+    className={`absolute flex items-center rounded-[18.49px_1.54px_18.49px_18.49px] border-2 px-3 py-1.5 text-xs text-primary-foreground ${
+      !customCursor ? "cursor-pointer" : ""
+    }`}
     style={{
       backgroundColor: "#F588B9",
       borderColor: "#D6699A",
@@ -53,6 +56,7 @@ const HeroSection = () => {
       e.stopPropagation();
       if (customCursor) {
         setCustomCursor(false);
+        document.body.style.cursor = "auto"; 
         const rect = containerRef.current?.getBoundingClientRect();
         if (rect) {
           setFixedPosition({
@@ -62,6 +66,7 @@ const HeroSection = () => {
         }
       } else {
         setCustomCursor(true);
+        document.body.style.cursor = "none"; 
         setMousePosition({ x: e.clientX, y: e.clientY });
         setFixedPosition({ x: 0, y: 0 });
       }
@@ -77,11 +82,9 @@ const HeroSection = () => {
     };
 
     window.addEventListener("mousemove", updateMousePosition);
-    document.body.style.cursor = "none";
 
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
-      document.body.style.cursor = "auto";
     };
   }, [customCursor]);
 
@@ -96,6 +99,7 @@ const HeroSection = () => {
             top: `${mousePosition.y}px`,
             zIndex: 50,
           }}
+          customCursor={customCursor} 
         />
       )}
       {!customCursor && fixedPosition.x !== 0 && fixedPosition.y !== 0 && (
@@ -107,6 +111,7 @@ const HeroSection = () => {
             top: `${fixedPosition.y}px`,
             zIndex: 50,
           }}
+          customCursor={customCursor} 
         />
       )}
       <div className="mx-auto mb-[100px] flex w-[366px] flex-col md:w-[720px] md:items-center lg:w-[960px] lg:flex-row lg:justify-between xl:w-[1216px] 2xl:mb-40 2xl:w-[1376px]">
